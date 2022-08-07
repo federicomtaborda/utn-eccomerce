@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+
+{% block contenedor %}
+
+<section class="py-5 container">
+  <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 contacto_padding_left">
+      <h1 class="fw-light titulo_contacto">Pagína de contacto </h1>
+
+      <form id="contact" action="" method="post" class="col-xs-12">{% csrf_token %} 
+
+        <div class="mb-3">
+          <label for="id_nombre" class="form-label">Ingrese Nombre y Apellido</label>
+          <input type="text" class="form-control" id="id_nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="id_mail" class="form-label">Correo Eléctronico</label>
+          <input type="email" class="form-control" id="id_mail" name="mail">
+        </div>
+        <div class="mb-3">
+          <label for="id_telefono" class="form-label">Telefono</label>
+          <input type="text" class="form-control" id="id_telefono" name="telefono">
+        </div>
+        <div class="mb-3">
+          <label for="id_descripcion" class="form-label">Ingrese una consulta.</label>
+          <textarea class="form-control" id="id_descripcion" rows="3" name="descripcion"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Enviar Consulta</button>
+
+      </form>
+
+      </div>
+      <div class="col-lg-6 col-md-8 contacto_padding_left">
+          <h1 class="fw-light titulo_contacto">Mapa ubicación </h1>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6919.483192742691!2d-59.13863576746797!3d-37.32837035648422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655167917874!5m2!1ses-419!2sar" 
+              width="540" height="320" style="border:1;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+        <div class="col-md-12 py-5">
+          <p><em>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas quidem explicabo sequi ipsam, a ratione 
+            aliquam numquam molestias corrupti tempore, ex deserunt animi aliquid. Dolorum, fugiat. Nam, quidem eaque? 
+          </em></p>
+        </div>  
+    </div>
+</section>
+  
+  {% endblock contenedor %}

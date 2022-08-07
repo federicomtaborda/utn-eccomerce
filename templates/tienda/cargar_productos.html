@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+
+{% block contenedor %}
+
+    <section class="py-5 container">
+    <div class="row py-lg-5">
+
+        <h3 class="pb-5">Carga y modificacion de productos</h3>
+        
+
+        <div class="col-md-8">
+            <form  id="cargar_productos" action="" method="post" enctype="multipart/form-data">{% csrf_token %} 
+                <div class="mb-3">
+                    <label for="id_nombre" class="form-label">Ingrese Producto</label>
+                    <input type="text" class="form-control" id="id_nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="id_descripcion" class="form-label">Descripcion del producto</label>
+                    <textarea type="text" class="form-control" id="id_descripcion" name="descripcion" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="id_precio_venta" class="form-label">Precio de Venta</label>
+                    <input type="number" class="form-control" id="id_precio_venta" name="precio_venta">
+                </div>
+                <div class="mb-3">
+                    <label for="id_imagen" class="form-label">Imagen del Producto</label>
+                    <input type="file" class="form-control" id="id_imagen" name="imagen">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary"><i class="far fa-save"></i> Gaurdar Producto</button>
+
+            </form>    
+        </div>        
+    </div>
+    </section>
+  
+  {% endblock contenedor %}

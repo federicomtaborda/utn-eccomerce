@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+
+{% block contenedor %}
+
+<section class="py-5 container">
+  <div class="row py-lg-5">
+    
+    <div class="text-center">
+        <h2 class="text-muted">Mensaje enviado correctamente!</h2>
+        <p>Responderemos su mensaje lo antes posible.</p>
+        <br>
+        <a href="{% url 'inventario:index' %}" class="btn btn-primary"> Volver al Inicio </a>
+    </div>
+ </div>
+</section>
+  
+  {% endblock contenedor %}

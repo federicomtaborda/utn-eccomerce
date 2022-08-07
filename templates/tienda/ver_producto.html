@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+
+{% block contenedor %}
+
+<section>
+    <div class="container">
+        <div class="album py-4 bg-light">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col-lg-12 col-md-12 text-center py-3">
+                  <div class="card">
+                    <div class="card-header">
+                        <h3 classs="fw-light py-3">
+                            Productos
+                        </h3>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img class="cortina_view" src="/media/{{producto.imagen}}" alt="cortinas">
+                      <div class="card-body">
+                        <h6 class="titulo-card">{{producto.nombre}}</h6>
+                        <p class="card-text">{{producto.descripcion}}</p>
+                        <p class="price-card">{{producto.precio_venta}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"></i> Ver Mas..</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i> Comprar</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</section>    
+  
+  {% endblock contenedor %}

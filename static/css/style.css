@@ -1,0 +1,51 @@
+.titulo_contacto{
+
+    margin-bottom: 30px;
+}
+
+.contacto_padding_left{
+    padding-left: 40px;
+}
+
+.img-maps{
+    width: 90%;
+    height: 90%;
+}
+
+.img-logo{
+
+    zoom: 20%;
+
+}
+
+.cortina_view{
+
+    height: 500px;
+    width: auto;
+}
+
+.color_gris{
+    
+    background-color: rgba(194, 194, 194, 0.658);
+}
+
+.text_color{
+
+    color: rgb(24, 24, 24);
+}
+
+.carousel-item> img {
+    width: 1200px; 
+    height: 600px; 
+   }
+
+.titulo-card {
+    font-size: 1.2em; 
+    font-weight: 500;
+   }
+
+.price-card{
+    font-size: 1.2em; 
+    font-weight: 400;
+    padding: 0.2em;
+   }
