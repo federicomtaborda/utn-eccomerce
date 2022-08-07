@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.sites',
     'registration', #should be immediately above 'django.contrib.admin'
+
     # apps por defecto
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,8 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # apps terceros
     #"captcha",
+
     # mis apps
     'contacto',
     'inventario',
