@@ -7,7 +7,7 @@ from inventario.models import Producto
 
 # Create your views here.
 
-def cargar_imagen(request):
+def cargar_producto(request):
     params={}
 
     if request.method == 'POST':
@@ -29,7 +29,7 @@ def cargar_imagen(request):
         return render(request, 'tienda/cargar_productos.html', params)
 
 
-class VerProductos(View): 
+class VerProductos(View):
     template = "tienda/productos.html"
 
     def get(self, request):

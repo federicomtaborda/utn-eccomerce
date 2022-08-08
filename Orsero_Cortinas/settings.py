@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'contacto',
     'inventario',
     'tienda',
+    'usuarios.apps.UsuariosConfig',
 ]
 
 MIDDLEWARE = [
