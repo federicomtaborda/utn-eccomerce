@@ -9,7 +9,6 @@ from inventario.models import Producto
 
 def cargar_producto(request):
     params={}
-
     if request.method == 'POST':
         form = CargarForm(request.POST, request.FILES)
         params['form']=form
@@ -22,6 +21,8 @@ def cargar_producto(request):
                 nuevo_producto = Producto(nombre=nombre, descripcion=descripcion, precio_venta=precio_venta, imagen=imagen)
                 nuevo_producto.save()
                 return render(request, 'tienda/cargar_productos.html')
+        else:
+            return render(request, 'tienda/cargar_productos.html')
 
     else:
         form = CargarForm()
@@ -31,7 +32,6 @@ def cargar_producto(request):
 
 class VerProductos(View):
     template = "tienda/productos.html"
-
     def get(self, request):
         params={}
         try:
