@@ -8,6 +8,7 @@ class Datosusuario(models.Model):
     imagen = models.ImageField(upload_to="usuarios/%Y/%m/%d", default='usuarios/user.png', blank=True, null=True) 
     nombre               = models.CharField(max_length=50)
     apellido             = models.CharField(max_length=50)
+    email                =models.EmailField(max_length = 50, blank=True, null=True)
     fecha_nacimiento     = models.DateField(blank=True, null=True)
     pais                 = models.CharField(max_length=30, blank=True)
     provincia            = models.CharField(max_length=40, blank=True)

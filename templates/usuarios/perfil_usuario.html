@@ -10,39 +10,60 @@
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                         <img class="rounded-circle mt-5" width="150px"
                              src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                        <span class="font-weight-bold">{{ usuario.username|lower|capfirst}}</span>
+                        <span class="font-weight-bold">{{ usuario.usuario|lower|capfirst}}</span>
                         <span class="text-black-50">{{ usuario.email|lower }}</span>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12">
+
+                <div class="col-md-8 col-xs-12">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h3 class="text-right">Perfil de Usuario</h3>
                         </div>
+                    <form method="post" enctype="multipart/form-data">{% csrf_token %}
                         <div class="row mt-3">
-
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Apellido</label>
-                                <input type="text" class="form-control" placeholder="Apellido.." value="{{ usuario.first_name }}">
+                                <input type="text" class="form-control" placeholder="Apellido.." value="{{ usuario.apellido }}">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" value="{{ usuario.last_name }}" placeholder="Nombre..">
+                                <input type="text" class="form-control" value="{{ usuario.nombre }}" placeholder="Nombre..">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Fecha Nacimiento</label>
+                                <input type="text" class="form-control" placeholder="Fecha Nacimiento" value="{{ usuario.fecha_nacimiento|date:"d-m-Y" }}">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Telefono</label>
+                                <input type="text" class="form-control" value="{{ usuario.telefono }}" placeholder="Telefono..">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Pais</label>
+                                <input type="text" class="form-control" value="{{ usuario.pais }}" placeholder="Pais..">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Provincia</label>
+                                <input type="text" class="form-control" value="{{ usuario.provincia }}" placeholder="Provincia..">
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" value="{{ usuario.email }}" placeholder="Email..">
+                                <input type="text" class="form-control" value="{{ usuario.email }}" placeholder="Email..">
                             </div>
 
                         </div>
 
-                        <div class="mt-5 text-center">
-                            <button class="btn btn-primary profile-button" type="button">Guardar Cambios</button>
+                        <div class="mt-5">
+                            <input type="submit" class="btn btn-primary profile-button" value="Guardar Cambios">
                         </div>
+                    </form>
+
                     </div>
                 </div>
                 </div>
+
             </div>
         </div>
 
