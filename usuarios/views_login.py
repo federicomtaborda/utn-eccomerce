@@ -12,7 +12,7 @@ def pagina_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("verproductos")
+            return redirect("perfil")
         else:
             return render(request, "usuarios/login.html", params)
 

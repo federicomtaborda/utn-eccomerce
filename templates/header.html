@@ -1,9 +1,9 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'inventario:index' %}">
             
-            <img src="/media/imagenes/logo_negro.png" class="img-logo" ></img>
+            <img src="/media/imagenes/logo_negro.png" class="img-logo" >
       
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,10 +40,20 @@
             </ul>
 
 
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar Producto.." aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"> Buscar</button>
-            </form>
+            <div class="d-flex mx-lg-5">
+
+                <div class="dropdown">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user"></i> Usuario
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item"  href="{% url 'login' %}"> Login</a></li>
+                    <li><a class="dropdown-item"  href="{% url 'perfil' %}"> Perfil de Usuario</a></li>
+                    <li><a class="dropdown-item"  href="{% url 'logout' %}"> Salir</a></li>
+                  </ul>
+                </div>
+
+            </div>
           </div>
 
         {% endwith %}  
